@@ -15,7 +15,7 @@ public class ComplainModel implements Serializable {
         this.offence = offence;
     }
 
-    public ComplainModel(){}
+    public ComplainModel(){}    //default constructor
 
     public int getComplainId() {
         return complainId;

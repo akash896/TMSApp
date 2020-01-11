@@ -76,8 +76,6 @@ public class Owner implements Serializable {
         return "Owner creation failed";
     }
 
-
-
     public Owner getOwnerDetails(int id) {
         String query = "SELECT * FROM owner where id = '" + id + "'";
         Owner o = null;

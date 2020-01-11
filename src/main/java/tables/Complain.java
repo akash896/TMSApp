@@ -120,13 +120,11 @@ public class Complain implements Serializable {
                         if (rs == null)
                             owner = null;
                         rs.next();
-                        //System.out.println("The owner details are: ");
-                        //System.out.println(rs.getInt("id"));
+
                         owna = rs.getString("owner_name");
                         owad = rs.getString("owner_address");
                         owner = new Owner(owid, owna, owad);
 
-                //System.out.println("offence details are :");
                 query = "SELECT * FROM offence where offence_id = '" + ofid + "'";
                 preparedStmt = MysqlCon.getConnection().prepareStatement(query);
                 rs = preparedStmt.executeQuery(query);

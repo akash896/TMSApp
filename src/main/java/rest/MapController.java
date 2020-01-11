@@ -53,29 +53,25 @@ public class MapController {
     }
 
     @GetMapping(path = "/TMSApp/get/Owner/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody
-    ResponseEntity<Owner> getOwner(@PathVariable int id) {
+    public @ResponseBody ResponseEntity<Owner> getOwner(@PathVariable int id) {
         Owner cOwner = owner.getOwnerDetails(id);
         return ResponseEntity.ok(cOwner);
     }
 
     @GetMapping(path = "/TMSApp/get/Vehicle/{id}")
-    public @ResponseBody
-    ResponseEntity<Vehicle> getVehicle( @PathVariable String id) {
+    public @ResponseBody ResponseEntity<Vehicle> getVehicle( @PathVariable String id) {
         Vehicle v = vehicle.getVehicleDetails(Integer.parseInt(id));
         return ResponseEntity.ok(v);
     }
 
     @GetMapping(path = "/TMSApp/get/Offence/{id}")
-    public @ResponseBody
-    ResponseEntity<Offence> getOffence(@PathVariable String id) {
+    public @ResponseBody ResponseEntity<Offence> getOffence(@PathVariable String id) {
         Offence o = offence.getOffenceDetails(Integer.parseInt(id));
         return ResponseEntity.ok(o);
     }
 
     @GetMapping(path = "/TMSApp/get/Complain/{id}") // Map ONLY POST Requests
-    public @ResponseBody
-    ResponseEntity<ComplainModel> getComplain(@PathVariable String id) throws SQLException {
+    public @ResponseBody ResponseEntity<ComplainModel> getComplain(@PathVariable String id) throws SQLException {
         ComplainModel complainModel = complain.getComplainDetails(Integer.parseInt(id));
         return ResponseEntity.ok(complainModel);
     }

@@ -1,7 +1,6 @@
 package tables;
 
 import connection.MysqlCon;
-
 import java.io.Serializable;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -63,7 +62,6 @@ public class Vehicle implements Serializable {
             return "new vehicle created ";
         else
             return "new vehicle creation failed";
-
     }
 
     public Vehicle getVehicleDetails(int vId) {

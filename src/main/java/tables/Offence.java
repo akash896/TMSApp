@@ -12,6 +12,7 @@ public class Offence implements Serializable {
     private String offenceName;
     int offenceFine;
 
+    // default constructor
     public Offence() {
     }
 

@@ -1,7 +1,6 @@
 package tables;
 
 import connection.MysqlCon;
-
 import java.io.Serializable;
 import java.sql.*;
 

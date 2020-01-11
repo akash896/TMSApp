@@ -9,8 +9,7 @@ public class MysqlCon {
     public Connection con;
     private static MysqlCon single_instance = null;
 
-    public MysqlCon()
-    {
+    public MysqlCon() {
         try{
             con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/?user=root&password=   ");
             Statement s = (Statement) con.createStatement();
@@ -19,14 +18,6 @@ public class MysqlCon {
         catch ( Exception e) {                e.printStackTrace();            }
         System.out.println("Connection created and connected to testdb");
     }
-
-//    public static MysqlCon getInstance()
-//    {
-//        if (single_instance == null)
-//            single_instance = new MysqlCon();
-//
-//        return single_instance;
-//    }
 
     public static Connection getConnection(){
         Connection con = null;
