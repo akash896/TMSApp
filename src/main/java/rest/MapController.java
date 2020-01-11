@@ -101,24 +101,28 @@ public class MapController {
     }
 
     @DeleteMapping(path = "/TMSApp/delete/Owner/{id}")
-    public @ResponseBody
-    String deleteOwner(@PathVariable String id) {
+    public  String deleteOwner(@PathVariable String id) {
         return Owner.deleteOwner(Integer.parseInt(id));
     }
 
     @DeleteMapping(path = "/TMSApp/delete/Vehicle/{id}")
-    public @ResponseBody String deleteVehicle(@PathVariable String id) {
+    public  String deleteVehicle(@PathVariable String id) {
         return Vehicle.deleteVehicle(Integer.parseInt(id));
     }
 
     @DeleteMapping(path = "/TMSApp/delete/Offence/{id}")
-    public @ResponseBody String deleteOffence(@PathVariable String id) {
+    public  String deleteOffence(@PathVariable String id) {
         return Offence.deleteOffence(Integer.parseInt(id));
     }
 
     @DeleteMapping(path = "/TMSApp/delete/Complain/{id}")
-    public @ResponseBody String deleteComplain(@PathVariable String id) {
+    public  String deleteComplain(@PathVariable String id) {
         return Complain.deleteComplain(Integer.parseInt(id));
+    }
+
+    @PutMapping(path = "/TMSApp/pay/Complain/{id}")
+    public String payFineComplain(@PathVariable int id){
+        return complain.payFine(id);
     }
 
 }// class ends
